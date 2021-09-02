@@ -20,7 +20,7 @@ def buildSingleLinkedList(array):
                                     
     return head
     
-def c(singleLinkedList):
+def singleLinkedToPythonList(singleLinkedList):
     out_list = []
     currentLink = singleLinkedList
 
