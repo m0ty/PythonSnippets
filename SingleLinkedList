@@ -19,3 +19,13 @@ def buildSingleLinkedList(array):
         prevNode = currNode
                                     
     return head
+    
+def c(singleLinkedList):
+    out_list = []
+    currentLink = singleLinkedList
+
+    while currentLink:
+        out_list.append(currentLink.val)
+        currentLink = currentLink.next
+    
+    return out_list
