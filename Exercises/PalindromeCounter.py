@@ -32,4 +32,4 @@ def palindrome_counter(word):
 
     return counter
 
-print(palindrome_counter("abBA"))
+print(palindrome_counter("tacocat"))
