@@ -23,12 +23,11 @@ def get_min_trips(garbage_bag_list):
     for left_index in range(number_of_bags):
         if left_index >= right_index:
             break
-        elif garbage_bag_list[left_index] > MAX_WEIGHT_IN_ONE_TRIP:
-            trips +=1
-        else:
-            if garbage_bag_list[left_index] + garbage_bag_list[right_index] <= MAX_BAG_WEIGHT:
-                right_index -= 1
-            trips += 1
+
+        if garbage_bag_list[left_index] + garbage_bag_list[right_index] <= MAX_BAG_WEIGHT:
+           right_index -= 1
+
+        trips +=1
 
     return trips
 
