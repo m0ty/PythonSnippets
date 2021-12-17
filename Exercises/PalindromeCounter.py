@@ -26,7 +26,7 @@ def palindrome_counter(word):
         if is_palindrome(sub_word):
             counter +=1
 
-        for j in range(len(sub_word)):
+        for j in range(1, len(sub_word)):
             if is_palindrome(sub_word[:-j]):
                 counter +=1
 
