@@ -2,7 +2,7 @@
 class ListNode:
   def __init__(self, val=0, next=None):
     self.val = val
-    self.next = next# Definition for singly-linked list.
+    self.next = next
 
 def buildSingleLinkedList(array):
     if len(array) == 0:
