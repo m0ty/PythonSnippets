@@ -6,13 +6,19 @@ One trip is described as selecting a number of bags which together do not weigh 
 dumping them in the outside trash can and returning to the school. 
 Given the number of plastic bags n, and the weights of each bag, 
 determine the minimum number of trips the janitor has to make.
+
+Example:
+weight = [1.01, 1.99, 2.5, 1.5, 1.01]
+
+The janitor can carry all plastic bags out in 3 trips:
+[1.01 + 1.99 , 2.5, 1.5 + 1.01].
 """
 
 MIN_BAG_WEIGHT = 1.01
 MAX_BAG_WEIGHT = 3
 MAX_WEIGHT_IN_ONE_TRIP = MAX_BAG_WEIGHT-MIN_BAG_WEIGHT
 
-def get_min_trips(garbage_bag_list):
+def get_min_trips(garbage_bag_list: list)-> int:
     trips = 0
 
     number_of_bags = len(garbage_bag_list)

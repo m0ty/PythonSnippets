@@ -9,7 +9,7 @@ Palindromic substrings are ['t', 'a', 'c', 'o', 'c', 'a', 't', 'coc', 'acoca', '
 There are 10 palindromic substrings.
 """
 
-def is_palindrome(word):
+def is_palindrome(word: str)-> bool:
     if len(word)==0:
         return False
     elif len(word)==1:
@@ -17,18 +17,16 @@ def is_palindrome(word):
     
     return word == word[::-1]
 
-def palindrome_counter(word):
+def palindrome_counter(word: str)-> int:
     counter = 0
 
     for i in range(len(word)):
         sub_word = word[i:]
 
-        if is_palindrome(sub_word):
-            counter +=1
+        if is_palindrome(sub_word): counter +=1    
 
         for j in range(1, len(sub_word)):
-            if is_palindrome(sub_word[:-j]):
-                counter +=1
+            if is_palindrome(sub_word[:-j]): counter +=1
 
     return counter
 

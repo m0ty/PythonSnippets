@@ -4,7 +4,7 @@ class ListNode:
     self.val = val
     self.next = next
 
-def buildSingleLinkedList(array):
+def buildSingleLinkedList(array: list)-> ListNode:
     if len(array) == 0:
         return
     head = ListNode(array[0])
@@ -20,7 +20,7 @@ def buildSingleLinkedList(array):
                                     
     return head
     
-def singleLinkedToPythonList(singleLinkedList):
+def singleLinkedToPythonList(singleLinkedList: ListNode)-> list:
     out_list = []
     currentLink = singleLinkedList
 
