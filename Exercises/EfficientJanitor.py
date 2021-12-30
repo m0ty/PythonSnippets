@@ -19,6 +19,10 @@ MAX_BAG_WEIGHT = 3
 MAX_WEIGHT_IN_ONE_TRIP = MAX_BAG_WEIGHT-MIN_BAG_WEIGHT
 
 def get_min_trips(garbage_bag_list: list)-> int:
+    """
+    :param garbage_bag_list: - list of ints,each representing the weight of garbage bag
+    :return: the minimum number of trips the janitor has to make
+    """
     trips = 0
 
     number_of_bags = len(garbage_bag_list)
