@@ -6,6 +6,36 @@ class int(int):
         """
         return min if self < min else max if self > max else self
 
+    def check_bit_at_position(self, position:int)->int:
+        """Check bit status at specified position.
+        Bits are counted from right to left.
+        position: index of bit to check.
+        """
+        state : bool = self & (1 << position) !=0
+        return 1 if state else 0
+
+    def flip_bit_at_position(self, position:int)->int:
+        """Flip bit at specified position.
+        position: index of bit to flip.
+        """
+        self ^= (1 << position)
+        return self
+
+    def set_bit_at_position(self, position:int, new_value:int)->int:
+        """Set bit value at specified position to 0 or 1.
+        position: index of bit to set.
+        new_value: new value of selected bit. Can be either 0 or 1.
+        """
+        if new_value not in [0,1]: raise ValueError("new_value parameter must be either 0 or 1")
+        mask = 1 << position
+        return (self & ~mask) | ((new_value << position) & mask)
+
+    def get_bit_string(self, desired_length:int=0)->str:
+        """Return bit value of a integer as string.
+        desired_length: length of returned string. Will be filled with zeros.
+        """
+        return bin(self)[2:].zfill(desired_length)
+
 class float(float):
     def clamp(self, min:int|float, max:int|float)->int|float:
         """Returns value clamped to the inclusive range of min and max
